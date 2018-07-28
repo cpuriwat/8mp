@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{408B6066-A834-40EF-ADA8-0D7CF7E284E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_8mpBl</RootNamespace>
+    <AssemblyName>8mpBl</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.0\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\EnumMessage.cs" />
+    <Compile Include="Enums\EnumModuleType.cs" />
+    <Compile Include="Enums\EnumMpObject.cs" />
+    <Compile Include="Enums\EnumOperationType.cs" />
+    <Compile Include="Enums\EnumParamItemType.cs" />
+    <Compile Include="Enums\EnumResult.cs" />
+    <Compile Include="Enums\EnumSnipType.cs" />
+    <Compile Include="Enums\EnumStatus.cs" />
+    <Compile Include="Events\CustomReturnEventArgs.cs" />
+    <Compile Include="Factory\Classes\AuthenticationApi.cs" />
+    <Compile Include="Factory\Classes\FailureApi.cs" />
+    <Compile Include="Factory\Classes\HookApi.cs" />
+    <Compile Include="Factory\Classes\OperationApi.cs" />
+    <Compile Include="Factory\Classes\ParamApi.cs" />
+    <Compile Include="Factory\Classes\ParamItemApi.cs" />
+    <Compile Include="Factory\Classes\PassFailApi.cs" />
+    <Compile Include="Factory\Classes\RouteApi.cs" />
+    <Compile Include="Factory\Classes\SnApi.cs" />
+    <Compile Include="Factory\Classes\SnipApi.cs" />
+    <Compile Include="Factory\Classes\SoApi.cs" />
+    <Compile Include="Factory\Classes\SubmitApi.cs" />
+    <Compile Include="Factory\Classes\UserApi.cs" />
+    <Compile Include="Factory\Interfaces\IFailureApi.cs" />
+    <Compile Include="Factory\Interfaces\IHookApi.cs" />
+    <Compile Include="Factory\Interfaces\IOperationApi.cs" />
+    <Compile Include="Factory\Interfaces\IParamApi.cs" />
+    <Compile Include="Factory\Interfaces\IParamItemApi.cs" />
+    <Compile Include="Factory\Interfaces\IPassFailApi.cs" />
+    <Compile Include="Factory\Interfaces\IRouteApi.cs" />
+    <Compile Include="Factory\Interfaces\ISnApi.cs" />
+    <Compile Include="Factory\Interfaces\ISnipApi.cs" />
+    <Compile Include="Factory\Interfaces\ISoApi.cs" />
+    <Compile Include="Factory\Interfaces\ISubmitApi.cs" />
+    <Compile Include="Factory\Interfaces\IUserApi.cs" />
+    <Compile Include="Helper\Classes\ControlBuilder.cs" />
+    <Compile Include="Helper\Classes\ControlBuilderLabel.cs" />
+    <Compile Include="Helper\Classes\ElementValidation.cs" />
+    <Compile Include="Helper\Classes\FormatValidate.cs" />
+    <Compile Include="Helper\Classes\MessageTextHandler.cs" />
+    <Compile Include="Helper\Classes\MpTransaction.cs" />
+    <Compile Include="Helper\Classes\WsHelper.cs" />
+    <Compile Include="Helper\Classes\WebServiceHelperBom.cs" />
+    <Compile Include="Helper\Classes\WebServiceHelperFailure.cs" />
+    <Compile Include="Helper\Classes\WebServiceHelperHook.cs" />
+    <Compile Include="Helper\Classes\WebServiceHelperParameter.cs" />
+    <Compile Include="Helper\Classes\WebServiceHelperPartialOne.cs" />
+    <Compile Include="Helper\Classes\WebServiceHelperProduct.cs" />
+    <Compile Include="Helper\Classes\WebServiceHelperRouting.cs" />
+    <Compile Include="Helper\Classes\WebServiceHelperSn.cs" />
+    <Compile Include="Helper\Classes\WebServiceHelperSnip.cs" />
+    <Compile Include="Helper\Classes\WebServiceHelperWorkOrder.cs" />
+    <Compile Include="Helper\Interfaces\IAuthenticationApi.cs" />
+    <Compile Include="Helper\Interfaces\IControlBuilder.cs" />
+    <Compile Include="Helper\Interfaces\IElementValidate.cs" />
+    <Compile Include="Helper\Interfaces\IFormatValidate.cs" />
+    <Compile Include="Helper\Interfaces\IHookUsage.cs" />
+    <Compile Include="Helper\Interfaces\IMessageTextHandler.cs" />
+    <Compile Include="Helper\Interfaces\IMpCommonApi.cs" />
+    <Compile Include="Helper\Interfaces\IMpTransaction.cs" />
+    <Compile Include="Helper\Interfaces\IMpUserControl.cs" />
+    <Compile Include="Helper\Interfaces\IWebServiceHelper.cs" />
+    <Compile Include="Helper\Interfaces\IWebServicePathHelper.cs" />
+    <Compile Include="Model\Bom\BomDetailVm.cs" />
+    <Compile Include="Model\FailureDefect\DefectVm.cs" />
+    <Compile Include="Model\FailureDefect\FailureVm.cs" />
+    <Compile Include="Model\FailureDefect\ReworkVm.cs" />
+    <Compile Include="Model\FailureDefect\UnitDefectVm.cs" />
+    <Compile Include="Model\FailureDefect\UnitFailureFlatVm.cs" />
+    <Compile Include="Model\FailureDefect\UnitFailureVm.cs" />
+    <Compile Include="Model\FailureDefect\UnitReworkVm.cs" />
+    <Compile Include="Model\General\CommonDesCateUrlSlugVm.cs" />
+    <Compile Include="Model\General\CommonMainSingleVm.cs" />
+    <Compile Include="Model\General\CommonUrlSlugVm.cs" />
+    <Compile Include="Model\General\ICreateModDateVm.cs" />
+    <Compile Include="Model\General\IDesCatVm.cs" />
+    <Compile Include="Model\General\INameTitleVm.cs" />
+    <Compile Include="Model\General\ISlugUrlVm.cs" />
+    <Compile Include="Model\General\IUserStatusVm.cs" />
+    <Compile Include="Model\General\LoginInfoVm.cs" />
+    <Compile Include="Model\General\MpObjectType.cs" />
+    <Compile Include="Model\General\ReturnMsgVm.cs" />
+    <Compile Include="Model\General\UcDataVm.cs" />
+    <Compile Include="Model\Helper\TransactionSubmitDataVm.cs" />
+    <Compile Include="Model\Hook\HookDetailVm.cs" />
+    <Compile Include="Model\Operation\OperationDetailVm.cs" />
+    <Compile Include="Model\Operation\OperationVm.cs" />
+    <Compile Include="Model\Parameter\ParameterItemDetailVm.cs" />
+    <Compile Include="Model\Parameter\ParameterItemListValueVm.cs" />
+    <Compile Include="Model\Parameter\ParameterItemValueVm.cs" />
+    <Compile Include="Model\Parameter\ParameterItemVm.cs" />
+    <Compile Include="Model\Parameter\ParameterVm.cs" />
+    <Compile Include="Model\Product\ProductDetailVm.cs" />
+    <Compile Include="Model\Route\NextCodeDetailVm.cs" />
+    <Compile Include="Model\Route\NextCodeVm.cs" />
+    <Compile Include="Model\Route\RouteDetailListVm.cs" />
+    <Compile Include="Model\Route\RouteDetailOperationStepVm.cs" />
+    <Compile Include="Model\Route\RouteDetailSingleVm.cs" />
+    <Compile Include="Model\Route\RouteListVm.cs" />
+    <Compile Include="Model\Route\RouteVm.cs" />
+    <Compile Include="Model\Snip\SnipVm.cs" />
+    <Compile Include="Model\Sn\SnDetailVm.cs" />
+    <Compile Include="Model\Sn\SnEngageUpdatVm.cs" />
+    <Compile Include="Model\Sn\SnEngageVm.cs" />
+    <Compile Include="Model\Sn\SnInfoVm.cs" />
+    <Compile Include="Model\Sn\SnPerformVm.cs" />
+    <Compile Include="Model\Sn\SnVm.cs" />
+    <Compile Include="Model\User\UserDetailVm.cs" />
+    <Compile Include="Model\User\UserVm.cs" />
+    <Compile Include="Model\WorkOrder\WorkOrderVm.cs" />
+    <Compile Include="Model\WorkOrder\WorkOrderDetailVm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MpFlexLib\MpFlexLib.vbproj">
+      <Project>{6CEB6DFE-61CC-4F1C-9A99-5A66BD3FAE1B}</Project>
+      <Name>MpFlexLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

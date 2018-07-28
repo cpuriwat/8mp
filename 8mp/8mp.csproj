@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C7AEBF4-D2FE-4846-BD76-9F4AD364B7FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_8mp</RootNamespace>
+    <AssemblyName>8mp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for WinForms R1 2018\Bin40\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for WinForms R1 2018\Bin40\Telerik.WinControls.Themes.TelerikMetroBlue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2018.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Progress\Telerik UI for WinForms R1 2018\Bin40\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmMessage.Designer.cs">
+      <DependentUpon>FrmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MdiMp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MdiMp.Designer.cs">
+      <DependentUpon>MdiMp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MpDockContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MpDockContent.Designer.cs">
+      <DependentUpon>MpDockContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MpToolbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MpToolbox.Designer.cs">
+      <DependentUpon>MpToolbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Classes\MpModuleController.cs" />
+    <Compile Include="Helper\Classes\MpModuleControllerRender.cs" />
+    <Compile Include="Helper\Classes\MpModuleFailureController.cs" />
+    <Compile Include="Helper\Classes\MpModuleParamController.cs" />
+    <Compile Include="Helper\Classes\MpModulePassFailController.cs" />
+    <Compile Include="Helper\Classes\MpModuleSnController.cs" />
+    <Compile Include="Helper\Classes\MpModuleSoController.cs" />
+    <Compile Include="Helper\Classes\MpModuleSubmitController.cs" />
+    <Compile Include="Helper\Classes\RenderModule.cs" />
+    <Compile Include="Helper\Interfaces\IMpModuleController.cs" />
+    <Compile Include="Helper\Interfaces\IMpModuleRenderController.cs" />
+    <Compile Include="Helper\Interfaces\IMpModuleRenderSnController.cs" />
+    <Compile Include="Helper\Interfaces\IMpUserControlParam.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Uc\CustomMpUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcFailure.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcFailure.Designer.cs">
+      <DependentUpon>UcFailure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UcParam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcParam.Designer.cs">
+      <DependentUpon>UcParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UcParamItemList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcParamItemList.Designer.cs">
+      <DependentUpon>UcParamItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UcParamItemOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcParamItemOption.Designer.cs">
+      <DependentUpon>UcParamItemOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UcParamItemRadio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcParamItemRadio.Designer.cs">
+      <DependentUpon>UcParamItemRadio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UcParamItemTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcParamItemTextBox.Designer.cs">
+      <DependentUpon>UcParamItemTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UcPassFail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcPassFail.Designer.cs">
+      <DependentUpon>UcPassFail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UcSn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcSn.Designer.cs">
+      <DependentUpon>UcSn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UcSo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcSo.Designer.cs">
+      <DependentUpon>UcSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UcSubmit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcSubmit.Designer.cs">
+      <DependentUpon>UcSubmit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmMessage.resx">
+      <DependentUpon>FrmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MdiMp.resx">
+      <DependentUpon>MdiMp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MpToolbox.resx">
+      <DependentUpon>MpToolbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Uc\UcFailure.resx">
+      <DependentUpon>UcFailure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UcParam.resx">
+      <DependentUpon>UcParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UcParamItemList.resx">
+      <DependentUpon>UcParamItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UcParamItemOption.resx">
+      <DependentUpon>UcParamItemOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UcParamItemRadio.resx">
+      <DependentUpon>UcParamItemRadio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UcParamItemTextBox.resx">
+      <DependentUpon>UcParamItemTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UcPassFail.resx">
+      <DependentUpon>UcPassFail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UcSn.resx">
+      <DependentUpon>UcSn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UcSo.resx">
+      <DependentUpon>UcSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UcSubmit.resx">
+      <DependentUpon>UcSubmit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\folder.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Form.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\net.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ToolboxWindow.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\8mpBl\8mpBl.csproj">
+      <Project>{408b6066-a834-40ef-ada8-0d7cf7e284e2}</Project>
+      <Name>8mpBl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MpFlexLib\MpFlexLib.vbproj">
+      <Project>{6ceb6dfe-61cc-4f1c-9a99-5a66bd3fae1b}</Project>
+      <Name>MpFlexLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
